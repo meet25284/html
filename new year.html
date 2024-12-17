@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year 2025</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-top: 20vh;
+            animation: glow 2s infinite ease-in-out;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            animation: slideIn 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 10px gold, 0 0 20px orange, 0 0 30px red;
+            }
+            50% {
+                text-shadow: 0 0 20px yellow, 0 0 30px gold, 0 0 40px red;
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: gold;
+            border-radius: 50%;
+            animation: explode 1.5s ease-out infinite;
+        }
+
+        @keyframes explode {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(10);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Happy New Year 2025 🎉</h1>
+    <h2>2025 is Coming... Get Ready for New Adventures!</h2>
+
+    <!-- Fireworks -->
+    <script>
+        function createFirework() {
+            const firework = document.createElement('div');
+            firework.classList.add('firework');
+            firework.style.left = Math.random() * 100 + 'vw';
+            firework.style.top = Math.random() * 100 + 'vh';
+            document.body.appendChild(firework);
+            setTimeout(() => firework.remove(), 1500);
+        }
+
+        setInterval(createFirework, 300);
+    </script>
+</body>
+</html>
